@@ -27,7 +27,7 @@ El objetivo de esta práctica es realizar una escena de eleccion personal, en la
 
 
 ## Dependencias
-No se ha utilizado ninguna librería externa y no existe ningun requisito que conlleve a tener que hacer ninguna tarea especial.
+No se ha utilizado ninguna librería externa y no existe ningun requisito que conlleve tener que hacer ninguna tarea especial.
  
 
 ## Desarrollo
