@@ -1,5 +1,5 @@
 # Ciu práctica 5
-Solar System & camera
+Camera & texture & lights
 
 ## Autor 
 **Doramas Báez Bernal** <br/>
