@@ -46,9 +46,9 @@ Cuando iniciamos la aplicación, aparecerá la vista principal, en la que se nos
  
 
 ### Generación del cubo y luminosidad<a id="cubo"></a>
-Es interesante comentar como se ha generado el macrocubo, la mayor influencia de para realizarlo del modo que explicaremos a continuacion es por el funcionamiento de la luz en processing.
+Es interesante comentar como se ha generado el macrocubo, la mayor influencia que ha habido para generarlo modo que explicaremos a continuacion es por el funcionamiento de la luz en processing.
 En processing, si tenemos una luz, esta se aplica sobre la cara del objeto. Por lo tanto, si realizaramos un cubo muy grande, este tendría toda su cara igual de iluminada y no se podría apreciar que cuanto más lejos de nuestro haz de luz más oscuro el cubo.
-Para solucionar este problema, lo que se ha hecho es generar dicho macrocubo a partir de muchos minicubos. Lo que se hizo es lo siguiente:
+Para solucionar este problema, lo que se ha hecho es generar dicho macrocubo a partir de muchos minicubos. Lo que se hizo fue lo siguiente:
  - Lo primero fue generar la pared inicial, para ello, utilizaremos 2 bucle for donde generamos los cubos en vertical x, vertical y.
  - Después a partir de ciertas translaciones de la propia pared que generamos anteriormente, podremos ir construyendo las distintas paredes que componen al cubo
  - Se ha dejado una entrada premeditadamente al cubo.
