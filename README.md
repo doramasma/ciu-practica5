@@ -52,6 +52,7 @@ Para solucionar este problema, lo que se ha hecho es generar dicho macrocubo a p
  - Lo primero fue generar la pared inicial, para ello, utilizaremos 2 bucle for donde generamos los cubos en vertical x, vertical y.
  - Después a partir de ciertas translaciones de la propia pared que generamos anteriormente, podremos ir construyendo las distintas paredes que componen al cubo
  - Se ha dejado una entrada premeditadamente al cubo.
+ 
  Por lo tanto, podrá comprobar en la práctica que si nos acercamos, la zona que está pegada a nuestro puntero, estará más iluminada que las esquinas del cubo.
 
 ### Textura <a id="texturas"></a>
