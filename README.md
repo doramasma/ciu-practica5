@@ -23,7 +23,7 @@ Correo: doramas.baez101@alu.ulpgc.es
 * [Referencias](#referencias)
 
 ## Introducción
-El objetivo de esta práctica es realizar una escena de eleccion personal, en la cual, haya objetos tridimensionales que incluyan texturas, luces y movimiento de cámara. En este caso, se ha optado por generar un entorno donde hay un cubo (con una puerta), el cual tiene una textura y además contamos con un puntero (representa a la persona) que produce un haz de luz. La idea, es poder ver como influye la luz en el entorno y que pasa si cambiamos de color o de intensidad de la misma.
+El objetivo de esta práctica es realizar una escena de eleccion personal, en la cual, hayan objetos tridimensionales que incluyan texturas, luces y movimiento de cámara. En este caso, se ha optado por generar un entorno donde hay un cubo (con una puerta), el cual tiene una textura y además contamos con un puntero (representa a la persona) que produce un haz de luz. La idea, es poder ver como influye la luz en el entorno y que pasa si cambiamos de color o de intensidad de la misma.
 
 
 ## Dependencias
