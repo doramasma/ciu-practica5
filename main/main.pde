@@ -17,9 +17,9 @@ void setup() {
   pause = true;
   font1 = loadFont("OCRAExtended-48.vlw");
   dist = -50;
-  eyeX=0;
+  eyeX=50;
   eyeY=150;
-  eyeZ=500;
+  eyeZ=-100;
   targetX=0;
   targetY=-100;
   targetZ=dist;
@@ -34,29 +34,29 @@ void draw() {
     background(0);
     camera();
     textFont(font1, 25);
-    image(imageW, 150, 70, 80, 50);
-    text("Vertical Y - ", 250, 100 );
+    image(imageW, 70, 70, 80, 50);
+    text("Move forward ", 170, 100 );
     
-    image(imageS, 150, 150, 80, 50);
-    text("Vertical Y + ", 250, 180 );
+    image(imageS, 70, 150, 80, 50);
+    text("Move backward ", 170, 180 );
     
-    image(imageUp, 150, 220, 80, 50);
-    text("Vertical X -", 250, 250 );
+    image(imageUp, 70, 220, 80, 50);
+    text("Increase light intensity", 170, 250 );
     
-    image(imageDown, 150, 290, 80, 50);
-    text("Vertical X +",250, 320 );
+    image(imageDown, 70, 290, 80, 50);
+    text("Decrease light intensity",170, 320 );
     
-    image(imageLeft, 175, 360, 55, 50);
-    text("Vertical Z +", 250, 390 );
+    image(imageLeft, 70, 360, 80, 50);
+    text("Change color", 170, 390 );
     
-    image(imageRight, 175, 430, 55, 50);
-    text("Vertical Z -", 250, 460 );
+    image(imageRight, 70, 430, 80, 50);
+    text("Change color", 170, 460 );
     
-    image(imageMouse, 175, 500, 55, 50);
-    text("Switch between the cameras", 250, 530 );
+    image(imageMouse, 95, 500, 55, 50);
+    text("Rotate camera", 170, 530 );
     
-    image(imageEnter, 175, 570, 55, 50);
-    text("Press Enter to resume o pause", 250, 600 );
+    image(imageEnter, 95, 570, 55, 50);
+    text("Press Enter to resume o pause", 170, 600 );
 
     
   } else {
