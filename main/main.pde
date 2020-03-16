@@ -3,17 +3,23 @@ float dist;
 float dx;
 PImage cubeTexture;
 PShape cube;
+PFont font1;
 boolean [] move = new boolean[6];
 boolean [] ligthControl = new boolean[6];
+boolean pause;
+PImage imageW, imageS, imageUp, imageDown, imageRight, imageLeft,imageMouse,imageEnter;
 float lightIntensity;
 int flag;
 
 void setup() {
   size(700, 700, P3D);
+  loadImages();
+  pause = true;
+  font1 = loadFont("OCRAExtended-48.vlw");
   dist = -50;
   eyeX=0;
   eyeY=150;
-  eyeZ=0.01;
+  eyeZ=500;
   targetX=0;
   targetY=-100;
   targetZ=dist;
@@ -24,19 +30,63 @@ void setup() {
 }
 
 void draw() {
-  background(0);
-  lightFalloff(.5, 0, 0.0008);
-  myCamera();
-  move();
-  puntero();
-  paintBox();
-  rotateWall();
-  ligthControl();
-  float fov = PI/3.0;
-  float cameraZ = (height/2.0) / tan(fov/2.0);
-  perspective(fov, float(width)/float(height), 
-    1, 10000);
+  if (pause) {
+    background(0);
+    camera();
+    textFont(font1, 25);
+    image(imageW, 150, 70, 80, 50);
+    text("Vertical Y - ", 250, 100 );
+    
+    image(imageS, 150, 150, 80, 50);
+    text("Vertical Y + ", 250, 180 );
+    
+    image(imageUp, 150, 220, 80, 50);
+    text("Vertical X -", 250, 250 );
+    
+    image(imageDown, 150, 290, 80, 50);
+    text("Vertical X +",250, 320 );
+    
+    image(imageLeft, 175, 360, 55, 50);
+    text("Vertical Z +", 250, 390 );
+    
+    image(imageRight, 175, 430, 55, 50);
+    text("Vertical Z -", 250, 460 );
+    
+    image(imageMouse, 175, 500, 55, 50);
+    text("Switch between the cameras", 250, 530 );
+    
+    image(imageEnter, 175, 570, 55, 50);
+    text("Press Enter to resume o pause", 250, 600 );
+
+    
+  } else {
+    background(0);
+    lightFalloff(.5, 0, 0.0008);
+    myCamera();
+    move();
+    puntero();
+    paintBox();
+    rotateWall();
+    ligthControl();
+    float fov = PI/3.0;
+    float cameraZ = (height/2.0) / tan(fov/2.0);
+    perspective(fov, float(width)/float(height), 
+      1, 10000);
+  }
+  
 }
+
+void loadImages() {
+  imageW = loadImage("./image/w.png");
+  imageS = loadImage("./image/s.png");
+  imageUp = loadImage("./image/up.png");
+  imageDown = loadImage("./image/down.png");
+  imageRight = loadImage("./image/right.png");
+  imageLeft = loadImage("./image/left.png");
+  imageMouse = loadImage("./image/mouse.png");
+  imageEnter = loadImage("./image/enter.png");
+}
+
 
 void paintBox() {
 
@@ -101,7 +151,7 @@ void puntero() {
   translate(0, 0, -50);
   if (flag == 0) {
     emissive(lightIntensity, lightIntensity, lightIntensity);
-    ambientLight(200, 200, 20);
+    ambientLight(200, 200, 200);
   }
   
   if (flag == 1) {
@@ -151,6 +201,7 @@ void ligthControl() {
 void keyPressed() {
   if (key == 'w' || key == 'W') move[0] =true;
   if (key == 's' || key == 'S') move[1] =true;
+  if (keyCode == ENTER) pause = !pause;
   if (key == CODED) {   
     if (keyCode == UP)   ligthControl[0] = true ;
     if (keyCode == DOWN) ligthControl[1] = true ;
